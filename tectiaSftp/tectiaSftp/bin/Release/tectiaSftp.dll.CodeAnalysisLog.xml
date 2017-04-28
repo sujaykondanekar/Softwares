@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp\bin\Release\tectiaSftp.dll">
+   <Modules>
+    <Module Name="tectiasftp.dll">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="NonBreaking">
+       <Issue Name="AttributeTrue" Certainty="95" Level="Error">Consider changing the ComVisible attribute on 'tectiaSftp.dll' to false, and opting in at the type level.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="TectiaSftp">
+       <Types>
+        <Type Name="ItectiaSftp" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#getFiles(System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Change 'List&lt;string&gt;' in 'ItectiaSftp.getFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error">Change 'List&lt;string&gt;' in 'ItectiaSftp.getFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#transferFiles(System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Change 'List&lt;string&gt;' in 'ItectiaSftp.transferFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error">Change 'List&lt;string&gt;' in 'ItectiaSftp.transferFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Sftp" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#TectiaSftp.ItectiaSftp.createLocalDirectory(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="150">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.createLocalDirectory(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 150</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.createRemoteDirectory(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="211">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.createRemoteDirectory(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 211</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.deleteFile(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="835">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.deleteFile(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 835</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.getFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="285">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.getFile(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 285</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.getFiles(System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="369">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.getFiles(List&lt;string&gt;, List&lt;string&gt;)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 369</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="303">Change 'List&lt;string&gt;' in 'Sftp.ItectiaSftp.getFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="303">Change 'List&lt;string&gt;' in 'Sftp.ItectiaSftp.getFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.removeLocalDirectory(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="429">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.removeLocalDirectory(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 429</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.removeRemoteDirectory(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="489">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.removeRemoteDirectory(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 489</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.removeRemoteDirectory(System.String,System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="550">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.removeRemoteDirectory(string, string, bool)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 550</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.renameFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="772">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.renameFile(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 772</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.transferFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="624">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.transferFile(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 624</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TectiaSftp.ItectiaSftp.transferFiles(System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="708">Object 'fs' can be disposed more than once in method 'Sftp.ItectiaSftp.transferFiles(List&lt;string&gt;, List&lt;string&gt;)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 708</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-06-02 16:53:07Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="642">Change 'List&lt;string&gt;' in 'Sftp.ItectiaSftp.transferFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp" File="Sftp.cs" Line="642">Change 'List&lt;string&gt;' in 'Sftp.ItectiaSftp.transferFiles(List&lt;string&gt;, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 835</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+   <Name>Mark assemblies with ComVisibleAttribute</Name>
+   <Description>The System.Runtime.InteropServices.ComVisible attribute indicates whether COM clients can use the library. Good design dictates that developers explicitly indicate COM visibility. The default value for this attribute is 'true'. However, the best design is to mark the assembly ComVisible false, and then mark types, interfaces, and individual members as ComVisible true, as appropriate.</Description>
+   <Resolution Name="AttributeTrue">Consider changing the ComVisible attribute on {0} to false, and opting in at the type level.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182157.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError, Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

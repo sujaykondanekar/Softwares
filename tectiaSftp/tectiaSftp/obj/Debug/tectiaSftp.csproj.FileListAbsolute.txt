@@ -1,0 +1,4 @@
+C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp\bin\Debug\tectiaSftp.dll
+C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp\bin\Debug\tectiaSftp.pdb
+C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp\obj\Debug\tectiaSftp.dll
+C:\Users\developer\documents\visual studio 2015\Projects\tectiaSftp\tectiaSftp\obj\Debug\tectiaSftp.pdb
